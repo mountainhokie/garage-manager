@@ -80,7 +80,7 @@ function BuyIt() {
 			<h1 className="title is-1 buy-title">Should I Buy It?</h1>
 
 			<ul className="should-list">
-				<li>KBB: ${kbbProfit}</li>
+				<li><span className="profit-type">KBB:</span> ${kbbProfit}</li>
 				<li><span className="profit-type">Actual:</span> ${actProfit}</li>
 				<li><span className="profit-type">Buy it:</span> <span className={buyCarHighlight}>{buyCarText}</span></li>
 			</ul>
