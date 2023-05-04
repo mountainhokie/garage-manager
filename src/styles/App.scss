@@ -1,0 +1,262 @@
+@import '_mixins.scss';
+@import "animate.module.scss";
+@import "buttons.scss";
+@import "modal.scss";
+@import "buyit.scss";
+@import "inspection.scss";
+@import "parts.scss";
+@import "todo.scss";
+@import "vehicles.scss";
+
+
+/* ------------------------------
+
+    Main Styles 
+  
+   ------------------------------
+*/
+
+*, 
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primaryPurple: #BDBDFF;
+  --black-1: #646681;
+  --black-2: #585858;
+  --bg-1: #f8f8ff;
+  --bg-2: #ecedf6;
+  --bg-3: #cccdde;
+  --gray-1: #eee;
+  --gray-2: #dedfe1;
+  --black: black;
+  --white: white;
+  --titleColor: #ccc;
+  --titleFont: 'Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif';
+  --bodyFont: 'Tahoma';
+  --bs-link-color: #BDBDFF;
+  --bg-grey: #282c34;
+  --dark-purple: #7600D6;
+  --red: #FF1616;
+}
+html {
+  /*  font-size: 12px;*/
+  font-size: calc(10px + 2vmin);
+}
+@media screen and (min-width: 768px) {
+  html {
+     font-size: 14px;
+  }
+}
+body {
+/*  font-family: 'Poppins', sans-serif;*/
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-1);
+}
+* {
+  font-family: var(--bodyFont);
+/*  font-family: 'Poppins', sans-serif;*/
+}
+
+.list-group {
+  --bs-list-group-active-bg: var(--primaryPurple);
+  --bs-list-group-active-border-color: var(--primaryPurple);
+}
+
+
+
+
+
+/* ------------------------------
+
+    Layout Styles
+  
+   ------------------------------
+*/
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80vmin;
+  pointer-events: none;
+  display: block;
+  margin: 0 auto 40px;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+.wrapper {
+  background-color: var(--bg-grey);
+  min-height: 100vh;
+  /*display: flex;*/
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-container {
+  max-width: 768px;
+  padding-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+
+  header {
+    margin-top: 1rem;
+  }
+} 
+
+/* ------------------------------
+
+    Nav Specific Styles
+  
+   ------------------------------
+*/
+
+.navbar-nav {
+  padding: 1rem 0;
+  a {
+    color: white;
+    text-align: center;
+  }
+}
+
+.home-nav a {
+  display: block;
+  margin: 0 auto 10px;
+  width: 200px;
+}
+
+.home-nav .button {
+  width: 200px;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.navbar-toggler {
+  &.collapsed {
+    .navbar-toggler-icon {
+      background-image: var(--bs-navbar-toggler-icon-bg);
+    }
+  }
+  .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3Csvg viewPort='0 0 12 12' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1' y1='33' x2='33' y2='1' stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-width='2'/%3E%3Cline x1='1' y1='1' x2='33' y2='33' stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-width='2'/%3E%3C/svg%3E");
+  }
+}
+
+.navbar-logo {
+  width: 125px;
+}
+
+.navbar-collapse 
+.navbar-item {
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+
+
+/* ------------------------------
+
+    Typography Styles
+  
+   ------------------------------
+*/
+
+
+h1, h2, h3 {font-weight: bold; }
+h1 { 
+  font-family: var(--titleFont);
+  color: var(--titleColor);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main-container {
+  > .ul, 
+  > ul {
+    font-size: calc(1.3rem + .6vw);
+  }
+} 
+
+
+
+/* --------------- Inline Edit ---------------------*/
+/* these make sure it can work in any text element */
+.inline-text_copy--active,
+.inline-text_input--active {
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 1px dashed #999999;
+  outline: none;
+}
+
+.inline-text_copy--active {
+  cursor: pointer;
+}
+
+.inline-text_copy--hidden,
+.inline-text_input--hidden {
+  display: none;
+}
+
+.inline-text_input--active {
+  border-bottom: 1px solid #666666;
+  text-align: left;
+}
+
+
+/* --------------- Collapse ---------------------*/
+
+.collapse-button {
+  display: block;
+  width: 100%;
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+
+.collapsed-content.expanded {
+  display: block;
+}

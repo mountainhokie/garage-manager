@@ -1,0 +1,23 @@
+.parts-section {
+  margin-bottom: 2rem;
+}
+
+
+.parts-table {
+  width: 100%;
+  font-size: 0.85rem;
+
+  th {
+      font-weight: normal;
+      background: rgba(255,255,255,0.3);
+      padding: 0.2rem 0.1rem;
+      &:first-child {
+        padding-left: 0.4rem;
+      }
+  }
+
+}
+
+.parts-table-vehicle {
+  margin-top: 1rem;
+}

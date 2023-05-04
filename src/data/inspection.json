@@ -1,0 +1,34 @@
+[
+	{
+		"area": "Basics", 
+		"items": ["VIN Checked"]
+	},
+	{
+		"area": "Body", 
+		"items": ["Scratches, Dents, Gaps, Bondo, Paint Seams on Edge of Panel, Windshield, Headlights, Inspection Sticker, Brakes"]
+	},
+		{
+		"area": "Engine", 
+		"items": ["Leaks, Radiator Cap, Oil Cap, Brake Fluid Reservoir"]
+	},
+	{
+		"area": "Undercarriage", 
+		"items": ["Leaks, Rust, Damage"]
+	},
+	{
+		"area": "Wheels/Tires", 
+		"items": ["Tire Depth, Tire Wear, Wheel Condition, Wheel Lugs, Camber/Toe"]
+	},
+	{
+		"area": "Interior", 
+		"items": ["Carpet, Seats, Options, Headliner, Steering Wheel"]
+	},
+	{
+		"area": "Test Drive", 
+		"items": ["Acceleration, Turning, Braking, Shifting, Cruise Control"]
+	},
+	{
+		"area": "Engine Codes", 
+		"items": ["Codes"]
+	}
+]

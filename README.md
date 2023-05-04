@@ -68,3 +68,85 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+MY EXAMPLES
+List of Issues by Series ID
+https://comicvine.gamespot.com/api/volume/4050-5044/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&field_list=issues
+
+https://comicvine.gamespot.com/api/volume/4050-3352/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&field_list=issues
+
+
+List of Issues by Cover Date (exact Date)
+https://comicvine.gamespot.com/api/issues/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&filter=cover_date:1993-07-31
+
+List of Issues by Cover Date (date range)
+https://comicvine.gamespot.com/api/issues/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&filter=cover_date:1993-07-30|1993-08-01
+
+    List of Series by Character
+https://comicvine.gamespot.com/api/volumes/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&filter=name:Doc%20Savage
+
+https://comicvine.gamespot.com/api/search/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&resources=character&query=%22Doc%20Savage%22
+
+Get Issue Info by ID
+https://comicvine.gamespot.com/api/issue/4000-37524/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json
+https://comicvine.gamespot.com/api/issue/4000-57511/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json
+
+
+OTHERS
+https://comicvine.gamespot.com/api/search/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&resources=volume&field_list=name&query=dead+man+logan
+
+
+
+To find a list of volumes based on some text criteria:
+This to search by series:  
+https://comicvine.gamespot.com/api/volumes/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&filter=name:Secret%20Defenders
+
+To find a set of issues based on some text criteria:
+https://comicvine.gamespot.com/api/search/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json&sort=name:asc&resources=issue&query=%22Secret%20Defenders%22
+
+To find a single issue based on an ID:
+https://comicvine.gamespot.com/api/issue/4000-37524/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&format=json 
+
+
+
+
+https://comicvine.gamespot.com/api/issues/?api_key=3d5a5f46a3fd926c0a82cdc9652ee7ec3570de63&limit=100&field_list=name,issue_number&filter=store_date:1984
+
+DB BREAKDOWN
+COLLECTION
+- Name
+- ID
+    + ISSUE
+        ID
+        Series Name
+        Comic Name
+        Description
+        Thumb
+        ....
+
+addCollection {
+    ref.push({
+        collectionName: collectionName
+    })
+}
+
+
+addIssueCollection = issueID => {
+    const ref = firebase
+      .database()
+      .ref(`collections/${COLLECTIONID}/${this.state.id}`);
+    ref.push({ 
+        issue: issueID,
+        seriesName: seriesName,
+        comicName: comicName,
+        img: img,
+        description: description
+    });
+  };
+
+
+

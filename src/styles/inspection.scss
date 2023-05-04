@@ -1,0 +1,55 @@
+ .item.inspection-item {
+    justify-content: space-between;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    // flex-wrap: wrap;
+    // > :first-child {
+    //     width: 100%;
+    // } 
+    // > :not(:first-child) {
+    //     flex: 1;
+    // }
+
+    .form-switch {
+        margin-right: 1rem;
+    }
+    .texts {
+        flex-direction: row;
+    }
+
+    .insp-type-check {
+        display: flex; 
+    }
+
+    .insp-type {
+        margin-right: 1rem;
+        color: var(--black-2);
+    }
+
+    .insp-issues {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .insp-notes {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form-control {
+        font-size: 0.8rem;
+    }
+    .svgBox { 
+        width: 25px;
+        margin-right: 1rem; 
+    }
+    .form-check-input:checked {
+        background-color: var(--red);
+        border-color: var(--red);
+    }
+}
+ 
+ 

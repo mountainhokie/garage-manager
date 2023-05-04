@@ -1,0 +1,39 @@
+.veh-features {
+  margin-bottom: 2rem;
+}
+
+
+.veh-table { 
+  width: 100%; 
+  border: 1px solid #191b20; 
+
+  .inline-text_copy { 
+    display: inline-block;
+    min-width: 40px; 
+    min-height: 16px;
+    margin-right: 10px; 
+  }
+  td {
+    select {
+      font-size: 0.8rem;
+    }
+  }
+
+}
+.veh-table  td { width: 45%; background-color: #191b20; padding: 0.25rem 0.5rem;  border: 1px solid #191b20; }
+.veh-table  td + td { width: 55%; background-color: var(--bg-grey); } 
+
+.vehicle-list {
+
+}
+
+.list-group-item {
+  &:hover {
+    background: #F7F7F7;
+  }
+  a {
+    display: block; 
+    color: #7600d6;
+    text-decoration: none;
+  }
+}
